@@ -1,0 +1,17 @@
+body {
+    width: 70%;
+    margin: 0 auto;
+}
+.main {
+    padding: 10px;
+    color: rgb(163, 18, 18);
+    border: 1px solid rgb(218, 39, 39);
+}
+
+#techstitution {
+    font-weight: 700;
+}
+
+#grupi {
+    font-style: italic;
+}
