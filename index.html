@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Forma e regjistrimit te pikave kufitare</title>    
+    <title>Forma e regjistrimit te pikave kufitare</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -14,8 +14,8 @@
 <body>
 <div class="container">
     <h3>Forma e regjistrimit te pikave kufitare</h3>
-    <form class="form-horizontal">
-        
+    <form class="form-horizontal" id="border-wait-form">
+        <input type="hidden" id="datetime-now">
         <div class="numri-seksionit">
             <div class="number">
                 1
@@ -24,11 +24,11 @@
                 <hr>
             </div>
         </div>
-    
+
         <div class="form-group">
             <label class="control-label col-sm-2" for="pika-kufitare">Pika kufitare</label>
             <div class="col-sm-3">
-                <select name="pika-kufitare" class="form-control dropmenyja">
+                <select name="pika-kufitare" id="pika-kufitare" class="form-control dropmenyja">
                     <option>Zgjedh piken kufitare</option>
                     <option>Merdare</option>
                     <option>Dheu i bardhe</option>
@@ -38,7 +38,7 @@
                 </select>
             </div>
         </div>
-      
+
         <div class="numri-seksionit">
             <div class="number">
                 2
@@ -47,40 +47,40 @@
                 <hr>
             </div>
         </div>
-    
+
         <h4>Hyrje</h4>
         <div class="form-group">
             <label class="control-label col-sm-2" for="hyrje-min-minuta">Minimum</label>
             <div class="col-sm-2">
-                <input type="email" class="form-control"  name="hyrje-min-minuta">
+                <input type="number" class="form-control"  min="0" max="59"  name="hyrje-min-minuta" id="hyrje-min-minuta">
             </div>
             <div class="col-sm-2  kolona-tre">
                 minuta
             </div>
-        </div> 
+        </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="hyrje-max-minuta">Maksimumi</label>
             <div class="col-sm-2">
-                <input type="email" class="form-control"  name="hyrje-max-minuta">
+                <input type="number" class="form-control"  name="hyrje-max-minuta" min="0" max="59"  id="hyrje-max-minuta">
             </div>
             <div class="col-sm-2 kolona-tre">
                 minuta
             </div>
-        </div> 
+        </div>
         <h4>Dalje</h4>
-         <div class="form-group">
+        <div class="form-group">
             <label class="control-label col-sm-2" for="dalje-min-minuta">Minimum</label>
             <div class="col-sm-2">
-                <input type="email" class="form-control"  name="dalje-min-minuta">
+                <input type="number" class="form-control"  name="dalje-min-minuta" id="dalje-min-minuta" min="0" max="59" >
             </div>
             <div class="col-sm-2  kolona-tre">
                 minuta
             </div>
-        </div> 
+        </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="dalje-max-minuta">Maksimumi</label>
             <div class="col-sm-2">
-                <input type="email" class="form-control"  name="dalje-max-minuta">
+                <input type="number" class="form-control"  name="dalje-max-minuta" id="dalje-max-minuta" min="0" max="59" >
             </div>
             <div class="col-sm-2 kolona-tre">
                 minuta
@@ -95,52 +95,52 @@
                 <hr>
             </div>
         </div>
-    
+
         <h4>Hyrje</h4>
         <div class="form-group">
             <label class="control-label col-sm-2" for="hyrje-min-metra">Minimum</label>
             <div class="col-sm-2">
-                <input type="email" class="form-control"  name="hyrje-min-metra">
+                <input type="number" class="form-control"  id="hyrje-min-metra" min="0" name="hyrje-min-metra">
             </div>
             <div class="col-sm-2  kolona-tre">
                 metra
             </div>
-        </div> 
+        </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="hyrje-max-metra">Maksimumi</label>
             <div class="col-sm-2">
-                <input type="email" class="form-control"  name="hyrje-max-metra">
+                <input type="number" class="form-control"  name="hyrje-max-metra" min="0"  id="hyrje-max-metra">
             </div>
             <div class="col-sm-2 kolona-tre">
                 metra
             </div>
-        </div> 
+        </div>
 
         <h4>Dalje</h4>
         <div class="form-group">
             <label class="control-label col-sm-2" for="dalje-min-metra">Minimum</label>
             <div class="col-sm-2">
-                <input type="email" class="form-control"  name="dalje-min-metra">
+                <input type="number" class="form-control"  name="dalje-min-metra" min="0" id="dalje-min-metra">
             </div>
             <div class="col-sm-2 kolona-tre">
                 metra
             </div>
-        </div> 
+        </div>
         <div class="form-group">
             <label class="control-label col-sm-2" for="dalje-max-metra">Maksimumi</label>
             <div class="col-sm-2">
-                <input type="email" class="form-control"  name="dalje-max-metra">
+                <input type="number" class="form-control"  name="dalje-max-metra" min="0"  id="dalje-max-metra">
             </div>
             <div class="col-sm-2 kolona-tre">
                 metra
             </div>
-        </div> 
+        </div>
 
         <div class="butonat">
             <input type="submit" class="btn btn-info" value="Dërgo">
             <input type="reset" class="btn btn-info" value="Fshij">
         </div>
-        
+
     </form>
 </div>
 <!-- jQuery and Bootstrap -->
