@@ -2,7 +2,7 @@
 An application built using Expressjs, and MongoDB.  
 
 ## There are two main folders here:
-* backend folder: the api,
+* backend folder: the API,
 * frontend folder: a simple client for the api, built using only HTML, CSS and JS.
 
 ## Before you proceed, make sure 
