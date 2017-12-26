@@ -14,7 +14,9 @@ In terminal write the following commands:
 * git clone https://github.com/valonhaliti/techstitution
 * cd techstitution/backend
 * npm install
-* npm start (or nodemon)
+* npm start (or nodemon) 
+
+The server *must* have port 3001. (So that the client can make requests to the API)
 
 ## After the server is running 
-* open index.html in frontend folder.
+* open index.html in frontend folder 
