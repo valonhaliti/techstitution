@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulari për regjistrimin e pikave kufitare</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+
+<body>
+    <a href="index.html">
+    <h1 class="title">Formulari për regjistrimin e pikave kufitare</h1>
+    </a>
+    <div id="homepage">
+        <h1>Vizualizimi i të dhënave</h1>
+        <div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    
+
+
+    <script type="text/javascript">
+        getData(data => {
+            let arr = [];
+            for (let i = 0; i < data.length; i++) {
+                let temp = [];
+                temp[0] = data[i].pikaKufitare;
+                temp[1] = data[i].hyrjeMaxMinuta + data[i].daljeMaxMinuta;
+                arr[i] = temp;
+            }
+            Highcharts.chart('container', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Koha më e gjatë e pritjes (në minuta)'
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+                        rotation: -45,
+                        style: {
+                            fontSize: '13px',
+                        }
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Minuta'
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                series: [{
+                    name: 'Minuta',
+                    data: arr,
+                    dataLabels: {
+                        enabled: true,
+                        rotation: -90,
+                        color: '#FFFFFF',
+                        align: 'right',
+                        format: '{point.y:.1f}', // one decimal
+                        y: 10, // 10 pixels down from the top
+                        style: {
+                            fontSize: '13px',
+                        }
+                    }
+                }]
+            });
+
+            
+        });
+       </script>
+
+</body>
+
+</html>

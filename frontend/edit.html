@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulari për regjistrimin e pikave kufitare</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <a href="index.html"><h1 class="title">Formulari për regjistrimin e pikave kufitare</h1></a>
+    <div id="homepage">
+        <h1>Modifiko</h1>
+        <!-- action="http://localhost:3001/data/add" -->
+        <form method="post" id="addForm">
+            <input type="hidden" id="datetime-now">
+
+            <div class="ndarja">
+                <div class="numri">
+                    1
+                </div>
+                <div class="vija">
+            
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="labelc">
+                    <label for="pika-kufitare">Pika kufitare</label>
+                </div>
+                <div class="selectc">
+                    <select name="pikaKufitare" id="pikaKufitare">
+                        <option>Zgjedh piken kufitare</option>
+                        <option>Merdare</option>
+                        <option>Dheu i bardhe</option>
+                        <option>Zgjedh piken kufitare</option>
+                        <option>Zgjedh piken kufitare</option>
+                        <option>Zgjedh piken kufitare</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="ndarja">
+                <div class="numri">
+                    2
+                </div>
+                <div class="vija">
+            
+                </div>
+            </div>
+            <h4>Hyrje</h4>
+            <div class="form-horizontal">
+                <div class="labelc">
+                    <label for="hyrje-min-minuta">Minimum</label>
+                </div>
+                <div class="inputc">
+                    <input type="number" min="0" max="59" name="hyrjeMinMinuta" id="hyrjeMinMinuta" required>
+                </div>
+                <div class="njesia">minuta</div>
+            </div>
+
+            <div class="form-horizontal">
+                <div class="labelc">
+                    <label for="hyrje-max-minuta">Maksimumi</label>
+                </div>
+                <div class="inputc">
+                    <input type="number" name="hyrjeMaxMinuta" min="0" max="59" id="hyrjeMaxMinuta" required>
+                </div>
+                <div class="njesia">minuta</div>
+            </div>
+
+            <h4>Dalje</h4>
+            <div class="form-horizontal">
+                <div class="labelc">
+                    <label for="dalje-min-minuta">Minimum</label>
+                </div>
+                <div class="inputc">
+                    <input type="number" name="daljeMinMinuta" id="daljeMinMinuta" min="0" max="59">
+                </div>
+                <div class="njesia">
+                    minuta
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                <div class="labelc">
+                    <label for="dalje-max-minuta">Maksimumi</label>
+                </div>
+                <div class="inputc">
+                    <input type="number" name="daljeMaxMinuta" id="daljeMaxMinuta" min="0" max="59" required>
+                </div>
+                <div class="njesia">
+                    minuta
+                </div>
+            </div>
+
+
+            <div class="ndarja">
+                <div class="numri">
+                    3
+                </div>
+                <div class="vija">
+            
+                </div>
+            </div>
+            <h4>Kolona (hyrje)</h4>
+            <div class="form-horizontal">
+                <div class="labelc">
+                    <label for="hyrje-min-metra">Minimum</label>
+                </div>
+                <div class="inputc">
+                    <input type="number" id="hyrjeMinMetra" min="0" name="hyrjeMinMetra" required>
+                </div>
+                <div class="njesia">
+                    metra
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                <div class="labelc">
+                    <label for="hyrje-max-metra">Maksimumi</label>
+                </div>
+                <div class="inputc">
+                    <input type="number" name="hyrjeMaxMetra" min="0" id="hyrjeMaxMetra" required>
+                </div>
+                <div class="njesia">
+                    metra
+                </div>
+            </div>
+
+            <h4>Kolona (dalje)</h4>
+            <div class="form-horizontal">
+                <div class="labelc">
+                    <label for="dalje-min-metra">Minimum</label>
+                </div>
+                <div class="inputc">
+                    <input type="number" name="daljeMinMetra" min="0" id="daljeMinMetra">
+                </div>
+                <div class="njesia">
+                    metra
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                <div class="labelc">
+                    <label for="dalje-max-metra">Maksimumi</label>
+                </div>
+                <div class="inputc">
+                    <input type="number" name="daljeMaxMetra" min="0" id="daljeMaxMetra">
+                </div>
+                <div class="njesia">
+                    metra
+                </div>
+            </div>
+
+            <div class="buttons-in-a-row">
+                <div>
+                    <input type="reset" value="Fshij">
+                </div>
+                <div>
+                    <input type="submit" value="Dërgo">
+                </div>
+            </div>
+        </form>
+        <p id="success">
+        </p>
+        <p>
+            <a href="data.html">
+                <i class="fas fa-table"></i> Të dhënat aktuale</a> &nbsp; &nbsp;
+            <a href="statistika.html">
+                <i class="fas fa-chart-line"></i> Vizualizimi i të dhënave</a>
+        </p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+        function GetURLParameter(sParam) {
+             let sPageURL = window.location.search.substring(1);
+             let sURLVariables = sPageURL.split('&');
+             for (let i = 0; i < sURLVariables.length; i++) {
+                 let sParameterName = sURLVariables[i].split('=');
+                 if (sParameterName[0] == sParam) {
+                     return sParameterName[1];
+                 }
+             }
+        }
+        // Callback function
+        getOneData(data => {
+            document.getElementById('pikaKufitare').value = data.pikaKufitare;
+            document.getElementById('hyrjeMinMinuta').value = data.hyrjeMinMinuta;
+            document.getElementById('hyrjeMinMetra').value = data.hyrjeMinMetra;
+            document.getElementById('hyrjeMaxMinuta').value = data.hyrjeMaxMinuta;
+            document.getElementById('hyrjeMaxMetra').value = data.hyrjeMaxMetra;
+
+            document.getElementById('daljeMinMinuta').value = data.daljeMinMinuta;
+            document.getElementById('daljeMinMetra').value = data.daljeMinMetra;
+            document.getElementById('daljeMaxMinuta').value = data.daljeMaxMinuta;
+            document.getElementById('daljeMaxMetra').value = data.daljeMaxMetra;
+            
+        }, GetURLParameter("id"));
+
+        document.getElementById('addForm').addEventListener('submit', postThisData);
+        function postThisData(e) {
+            e.preventDefault();
+            $.ajax({
+                url: "http://localhost:3001/data/update/" + GetURLParameter("id"),
+                type: 'PUT',
+                data: $("#addForm").serialize(),
+                success: function (data) {
+                    $('#success').text("Modifikimi u bë me sukses!");
+                    document.getElementById('addForm').reset();
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
